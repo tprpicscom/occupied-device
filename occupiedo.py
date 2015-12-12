@@ -9,7 +9,7 @@ FIREBASE = firebase.FirebaseApplication(fbRef, None)
 # updates firebase to the new state
 def change_occupied_state(state):
 	if state == 0:
-		#toilet is now unoccupied
+		#toilet is now not occupied
 		FIREBASE.put('/', 'occupied', 'false')
 		#send text to next person in the queue
 		get_next_in_queue()
