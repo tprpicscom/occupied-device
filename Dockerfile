@@ -9,8 +9,6 @@ RUN apt-get install -y python wget build-essential python-dev python-pip
 
 RUN pip install RPi.Gpio requests python-firebase twilio 
 
-#tpr added
-RUN pip install 'requests[security]'
 
 ADD . /app
 
