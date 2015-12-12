@@ -3,6 +3,9 @@ import RPi.GPIO as GPIO
 import time
 from firebase import firebase
 import occupiedo
+#tpr added next two lines
+import requests.packages.urllib3
+requests.packages.urllib3.disable_warnings()
 
 GPIO.setmode(GPIO.BCM)
 
