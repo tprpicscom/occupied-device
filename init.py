@@ -23,4 +23,4 @@ while True:
 		occupiedo.change_occupied_state(input_state)
 
 	prev_state = input_state
-	time.sleep(2.2)
+	time.sleep(0.2)
