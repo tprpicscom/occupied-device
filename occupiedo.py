@@ -11,17 +11,20 @@ def change_occupied_state(state):
 	if state == 0:
 		#toilet is now not occupied
 		FIREBASE.put('/', 'occupied', 'false')
+		#tpr
+		req = urllib3.Request(hue_greenurl)	
 		#send text to next person in the queue
 		get_next_in_queue()
 	else:
 		#toilet is now occupied 
 		FIREBASE.put('/', 'occupied', 'true')
+		req = urllib3.Request(hue_redurl)
 
 # sends text to next in queue
 def send_text(number, name):
 	# Your Account Sid and Auth Token from twilio.com/user/account
 	client = TwilioRestClient(twilio_acc_id, twilio_acc_auth_token)
-	message = client.messages.create(body=name + " the toilet is now open!",
+	message = client.messages.create(body=name + " Da Can is now open!",
 	    to= number,    # Replace with your phone number
 	    from_=twilio_number) # Replace with your Twilio number
 	print "text sent"
