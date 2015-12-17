@@ -2,7 +2,7 @@ import os
 from firebase import firebase
 import requests
 from twilio.rest import TwilioRestClient
-from config import fbRef, twilio_acc_id, twilio_acc_auth_token, twilio_number hue_redurl hue_greenurl
+from config import fbRef, twilio_acc_id, twilio_acc_auth_token, twilio_number, hue_redurl, hue_greenurl
 
 FIREBASE = firebase.FirebaseApplication(fbRef, None)
 
