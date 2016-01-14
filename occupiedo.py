@@ -14,7 +14,7 @@ def change_occupied_state(state):
 		#tpr
 		req = requests.get(hue_greenurl)	
 		#send text to next person in the queue
-		get_next_in_queue()
+		#get_next_in_queue()
 	else:
 		#toilet is now occupied 
 		FIREBASE.put('/', 'occupied', 'true')
